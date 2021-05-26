@@ -315,13 +315,16 @@ for ( let i = 0 ; i< typesOffood.length; i++){
 
 // }
 
-
+// how many tries
 for (let i = 0; i <5; i++) {
     console.log('inside first loop',i);
+
+    // array
 
     for (let j = 0; j < 10; j++) {
         console.log('inside seond loop',j);
         
+        break;
     }
     
 }
