@@ -100,4 +100,5 @@ question2();
 
 
 
+
 // console.log('local variable',lastName);
