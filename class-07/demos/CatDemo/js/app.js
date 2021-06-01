@@ -229,7 +229,12 @@ console.log(kittens);
 
 
 // normal function  the header and one for the footer NOT PROTOTYPE
+// name min max avg
+
+// make the table as global
 function makingHeader(){
+    // tr 
+    // th
 
 }
 makingHeader();
@@ -238,10 +243,15 @@ makingHeader();
 
 Shop.prototype.render=function(){
     // make a row for the shop
+    // tr
+    // td
+
 }
 
 
 function makingFooter() {
+    // tr
+    // th
     
 }
 makingFooter();
