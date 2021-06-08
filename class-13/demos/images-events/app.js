@@ -89,8 +89,6 @@ function Goat(name,source) {
   this.votes=0;
   this.shown=0;
 
-  
-
   goatNames.push(this.name);
 
   Goat.allGoats.push(this);
@@ -118,7 +116,7 @@ function generateRandomIndex() {
 
 // console.log(generateRandomIndex());
 
-
+let shownPictures=[];
 function renderTwoImages() {
   // 0=>7
   leftImageIndex=generateRandomIndex();
@@ -127,8 +125,11 @@ function renderTwoImages() {
 
   middleImageIndex=generateRandomIndex();
 
-  while (leftImageIndex===rightImageIndex||leftImageIndex===middleImageIndex||middleImageIndex===rightImageIndex) {
+  console.log('before',shownPictures);
+
+  while (leftImageIndex===rightImageIndex||leftImageIndex===middleImageIndex||middleImageIndex===rightImageIndex||shownPictures.includes(leftImageIndex)||shownPictures.includes(rightImageIndex)||shownPictures.includes(middleImageIndex)) {
     rightImageIndex=generateRandomIndex();
+    leftImageIndex=generateRandomIndex();
     middleImageIndex=generateRandomIndex();    
   }
 
@@ -139,6 +140,17 @@ function renderTwoImages() {
   // Goat.allGoats[4];
   // []
   // [left midd right]
+
+
+  // shownPictures=[leftImageIndex,middleImageIndex,rightImageIndex];
+
+
+  // pushing into the shown array
+  shownPictures=[];
+  shownPictures.push(leftImageIndex,rightImageIndex,middleImageIndex);
+
+  console.log('after',shownPictures);
+
 
   // console.log(Goat.allGoats[leftImageIndex].source);
 
